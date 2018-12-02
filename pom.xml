@@ -83,9 +83,19 @@
 			<groupId>com.spotify</groupId>
 			<artifactId>docker-maven-plugin</artifactId>
 			<version>1.0.0</version>
+			 <executions>
+	    			<execution>
+		     			 <id>default</id>
+					      <goals>
+					        <goal>build</goal>
+					        <goal>push</goal>
+					      </goals>
+	   			 	</execution>
+  			</executions>
 			<configuration>
 				<imageName>${docker.image.name}</imageName>
 				<dockerDirectory>src/main/resources/docker</dockerDirectory>
+				<repository>509908012422.dkr.ecr.us-east-2.amazonaws.com/${docker.image.name}:${project.artifactId}</repository>
 				<resources>
 					<resource>
 						<targetPath>/</targetPath>

@@ -84,7 +84,7 @@
 			<artifactId>docker-maven-plugin</artifactId>
 			<version>1.0.0</version>
 			<configuration>
-				<imageName>${docker.image.name}:latest</imageName>
+				<imageName>${docker.image.name}:${version}</imageName>
 				<dockerDirectory>src/main/resources/docker</dockerDirectory>
 				<resources>
 					<resource>

@@ -116,7 +116,9 @@
 			<configuration>
 				<imageName>${docker.image.name}</imageName>
 				<dockerDirectory>src/main/resources/docker</dockerDirectory>
+				<pushImage>true</pushImage>
 				<repository>509908012422.dkr.ecr.us-east-2.amazonaws.com/${docker.image.name}:${project.artifactId}</repository>
+				<registryUrl>https://509908012422.dkr.ecr.us-east-2.amazonaws.com</registryUrl>
 				<resources>
 					<resource>
 						<targetPath>/</targetPath>

@@ -114,6 +114,8 @@
         </execution>
     </executions>
 			<configuration>
+			   <dockerHost>unix:///var/run/docker.sock</dockerHost>
+				<registryUrl>https://509908012422.dkr.ecr.us-east-2.amazonaws.com</registryUrl>
 				<imageName>${docker.image.name}</imageName>
 				<dockerDirectory>src/main/resources/docker</dockerDirectory>
 				<pushImage>true</pushImage>

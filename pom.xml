@@ -83,43 +83,13 @@
 			<groupId>com.spotify</groupId>
 			<artifactId>docker-maven-plugin</artifactId>
 			<version>1.0.0</version>
-		<executions>
-        <execution>
-            <phase>package</phase>
-            <goals>
-                <goal>build</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>tag-image</id>
-            <phase>package</phase>
-            <goals>
-                <goal>tag</goal>
-            </goals>
-            <configuration>
-           		<image>${docker.image.name}:${project.artifactId}</image>
-                <newName>509908012422.dkr.ecr.us-east-2.amazonaws.com/${docker.image.name}:${project.artifactId}</newName>
-                <forceTags>true</forceTags>
-            </configuration>
-        </execution>
-        <execution>
-            <id>push-image</id>
-            <phase>install</phase>
-            <goals>
-                <goal>push</goal>
-            </goals>
-            <configuration>
-                <imageName>509908012422.dkr.ecr.us-east-2.amazonaws.com/${docker.image.name}:${project.artifactId}</imageName>
-            </configuration>
-        </execution>
-    </executions>
 			<configuration>
-			   <dockerHost>unix:///var/run/docker.sock</dockerHost>
+			    <dockerHost>unix:///var/run/docker.sock</dockerHost>
 				<registryUrl>https://509908012422.dkr.ecr.us-east-2.amazonaws.com</registryUrl>
 				<imageName>${docker.image.name}</imageName>
 				<dockerDirectory>src/main/resources/docker</dockerDirectory>
 				<pushImage>true</pushImage>
-				<repository>509908012422.dkr.ecr.us-east-2.amazonaws.com/${docker.image.name}:${project.artifactId}</repository>
+				<repository>509908012422.dkr.ecr.us-east-2.amazonaws.com/springboot-demo:latest</repository>
 				<resources>
 					<resource>
 						<targetPath>/</targetPath>

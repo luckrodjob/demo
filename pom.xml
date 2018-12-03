@@ -97,7 +97,8 @@
                 <goal>tag</goal>
             </goals>
             <configuration>
-                <imageName>509908012422.dkr.ecr.us-east-2.amazonaws.com/${docker.image.name}:${project.artifactId}</imageName>
+           		<image>${docker.image.name}:${project.artifactId}</image>
+                <newName>509908012422.dkr.ecr.us-east-2.amazonaws.com/${docker.image.name}:${project.artifactId}</newName>
                 <forceTags>true</forceTags>
             </configuration>
         </execution>

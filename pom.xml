@@ -83,16 +83,17 @@
 			<groupId>com.spotify</groupId>
 			<artifactId>docker-maven-plugin</artifactId>
 			<version>1.0.0</version>
+			<!--
 			 <executions>
 	    			<execution>
 		     			 <id>default</id>
 					      <goals>
 					        <goal>build</goal>
-					        <!-- <goal>push</goal> -->
+					         <goal>push</goal> 
 					        
 					      </goals>
 	   			 	</execution>
-  			</executions>
+  			</executions>-->
 			<configuration>
 				<imageName>${docker.image.name}</imageName>
 				<dockerDirectory>src/main/resources/docker</dockerDirectory>

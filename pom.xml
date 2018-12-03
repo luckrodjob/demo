@@ -84,12 +84,8 @@
 			<artifactId>docker-maven-plugin</artifactId>
 			<version>1.0.0</version>
 			<configuration>
-			    <dockerHost>unix:///var/run/docker.sock</dockerHost>
-				<registryUrl>https://509908012422.dkr.ecr.us-east-2.amazonaws.com</registryUrl>
 				<imageName>${docker.image.name}</imageName>
 				<dockerDirectory>src/main/resources/docker</dockerDirectory>
-				<pushImage>true</pushImage>
-				<repository>509908012422.dkr.ecr.us-east-2.amazonaws.com/springboot-demo:latest</repository>
 				<resources>
 					<resource>
 						<targetPath>/</targetPath>

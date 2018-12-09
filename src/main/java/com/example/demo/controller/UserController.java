@@ -22,6 +22,13 @@ public class UserController {
 	@Autowired
 	private IUserService userService;
 	
+	@RequestMapping(value="/clean", method= {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE})
+	@ResponseBody
+	public String  clearAllUsers() {
+		userService.deleteAllUsers();
+		return "success";
+	}
+	
 	@RequestMapping(value="/{id}", method= {RequestMethod.GET,RequestMethod.DELETE})
 	@ResponseBody
 	public User findUser(@PathVariable(name= "id")String userId,HttpServletRequest request) {

@@ -45,4 +45,9 @@ public class UserServiceImp implements IUserService{
 		userDao.deleteById(id);		
 	}
 
+	@Override
+	public void deleteAllUsers() {
+		userDao.deleteAll();
+	}
+
 }

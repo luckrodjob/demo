@@ -13,4 +13,6 @@ public interface IUserService {
 	User saveUser(User user);
 	
 	void deleteUser(String id);
+	
+	void deleteAllUsers();
 }

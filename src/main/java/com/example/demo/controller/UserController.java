@@ -29,6 +29,13 @@ public class UserController {
 		return "success";
 	}
 	
+	@RequestMapping(value="/delete/{id}", method= {RequestMethod.POST})
+	@ResponseBody
+	public String cleanUser(@PathVariable(name= "id")String userId) {
+		userService.deleteUser(userId);
+		return "success"	;
+	}
+	
 	@RequestMapping(value="/{id}", method= {RequestMethod.GET,RequestMethod.DELETE})
 	@ResponseBody
 	public User findUser(@PathVariable(name= "id")String userId,HttpServletRequest request) {
